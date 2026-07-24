@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/PretendardVariable.ttf') format('truetype-variations');
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream1.otf') format('opentype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream2.otf') format('opentype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream3.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream4.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream5.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream6.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream7.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream8.otf') format('opentype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  src: url('/fonts/SCDream9.otf') format('opentype');
+  font-weight: 900;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Input placeholder styling */
+input::placeholder {
+  color: #d8d8d8 !important;
+  opacity: 1 !important;
+}
+
+input:focus::placeholder {
+  color: transparent !important;
+}
+
+input {
+  color: #333 !important;
+}
+

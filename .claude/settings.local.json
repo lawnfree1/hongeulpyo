@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_figma_figma__get_design_context",
+      "Bash(npm run *)",
+      "mcp__plugin_figma_figma__get_screenshot",
+      "WebFetch(domain:ungveloper.tistory.com)",
+      "mcp__plugin_figma_figma__use_figma",
+      "Skill(run)",
+      "Bash(npm install *)",
+      "mcp__plugin_figma_figma__download_assets",
+      "Bash(git add *)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "figma"
+  ]
+}
