@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
 
-// Image URLs from Figma
-const imgImage11 = "https://www.figma.com/api/mcp/asset/a0ce6218-98d5-4339-aa25-be8c26d4d106";
-const imgLogo2 = "https://www.figma.com/api/mcp/asset/996a2ade-a084-4f21-83bf-8c8cd0ecc168";
+// Image URLs from local assets
+const imgImage11 = "/images/hero-bg.png";
+const imgLogo2 = "/images/logo.png";
 const imgHeadlineWithDots = "/images/headline-group-1.png";
-const imgIcons = "https://www.figma.com/api/mcp/asset/4b6e3624-52f5-4cd4-989f-7445b02a9742";
-const imgVector = "https://www.figma.com/api/mcp/asset/388bb3dd-ef6b-42f1-8a93-04c49a6050c6";
-const imgTi289A3900404 = "https://www.figma.com/api/mcp/asset/096b7e0b-d9a3-4718-9c73-12f164318470";
-const imgTi381A3380701 = "https://www.figma.com/api/mcp/asset/1dab9643-acc8-45a8-9b0a-1195d32cbab4";
-const imgTi122A19102031 = "https://www.figma.com/api/mcp/asset/e8c79049-9f2c-4067-99d9-6c4864f764a6";
-const imgTi323A20607061 = "https://www.figma.com/api/mcp/asset/bfacf63b-158e-446f-a131-47ae66b8cb7a";
-const imgTi122A19402031 = "https://www.figma.com/api/mcp/asset/a2bb621a-3f34-4457-9fc0-86bf7066d167";
-const imgTi436A46213061 = "https://www.figma.com/api/mcp/asset/6a85c05b-9d12-4fc5-b8fa-0559a3f7dc82";
-const imgTica1010009752011 = "https://www.figma.com/api/mcp/asset/91870a10-9497-4966-83cd-bcad3e094e48";
-const imgGroup2 = "https://www.figma.com/api/mcp/asset/08cee266-893a-4bca-afb2-527739217dc9";
-const imgIconsConsultation = "https://www.figma.com/api/mcp/asset/49d4085a-85e2-4bbb-8bd2-ee465670b649";
-const img1 = "https://www.figma.com/api/mcp/asset/9b18fb78-247f-4bb9-b997-3de0cacbd42a";
-const img2 = "https://www.figma.com/api/mcp/asset/2a443176-cceb-4070-860f-fe4e8d0ccd55";
-const imgFrame44 = "https://www.figma.com/api/mcp/asset/37409597-0e35-4f95-b9c2-edea13eade3b";
+const imgIcons = "/images/phone-icon.png";
+const imgVector = "/images/arrow-down.png";
+const imgTi289A3900404 = "/images/phone-icon-large.png";
+const imgTi381A3380701 = "/images/kakao-icon.png";
+const imgTi122A19102031 = "/images/icon-target.png";
+const imgTi323A20607061 = "/images/icon-method.png";
+const imgTi122A19402031 = "/images/icon-asset.png";
+const imgTi436A46213061 = "/images/icon-result.png";
+const imgTica1010009752011 = "/images/lawyer-profile.png";
+const imgGroup2 = "/images/arrow-cta.png";
+const imgIconsConsultation = "/images/phone-icon.png";
+const img1 = "/images/arrow-right-white.png";
+const img2 = "/images/arrow-right-dark.png";
+const imgFrame44 = "/images/frame-background.png";
 const imgBankruptcyTarget = "/images/bankruptcy-target.png";
 const imgBankruptcyMethod = "/images/bankruptcy-method.png";
 const imgBankruptcyAsset = "/images/bankruptcy-asset.png";
