@@ -9,7 +9,11 @@
       "Skill(run)",
       "Bash(npm install *)",
       "mcp__plugin_figma_figma__download_assets",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)"
     ]
   },
   "enabledMcpjsonServers": [
