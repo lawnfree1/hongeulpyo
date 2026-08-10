@@ -16,12 +16,22 @@
 ### 프로젝트 구조
 ```
 src/
-├── app.tsx          # 메인 애플리케이션 (초기 확인 필수)
-└── [다른 컴포넌트 및 파일들]
+├── App.tsx          # 랜딩 페이지 (초기 확인 필수)
+├── main.tsx         # / → App, /admin → AdminPage
+├── lib/api.ts       # 서버 API 호출
+├── components/      # QuickConsultForm, DetailConsultForm, admin/*
+└── pages/           # AdminLogin, AdminPage
+
+server/              # Express API (MySQL 저장 + 솔라피 문자 발송)
+api/index.js         # Vercel 서버리스 진입점
 ```
+상담 신청·관리자 기능의 상세 동작과 배포 절차는 `README.md` 참고.
 
 ## 기술 스택
 - React + TypeScript
 - Tailwind CSS
 - Vite
+- Express + MySQL (mysql2)
+- 솔라피(Solapi) 문자 발송
+- Vercel 배포
 - Figma MCP 통합

@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import QuickConsultForm from './components/QuickConsultForm';
+import DetailConsultForm from './components/DetailConsultForm';
 
 // Image URLs from local assets
 const imgImage11 = "/images/hero-bg.png";
@@ -135,9 +137,6 @@ function ProcedureTab({ quote, items }: ProcedureTabProps) {
 
 export default function App() {
   const [tabActive, setTabActive] = useState('recovery');
-  const [selectedInterest, setSelectedInterest] = useState('recovery');
-  const [selectedDebt, setSelectedDebt] = useState('2,000만원 이하');
-  const [focusedInput, setFocusedInput] = useState<string | null>(null);
   const [activeBorderCard, setActiveBorderCard] = useState(0);
   const [displayedRowIndex, setDisplayedRowIndex] = useState(0);
 
@@ -167,8 +166,6 @@ export default function App() {
     { name: '허ㅇㅇ', job: '건축사', case: '개인회생', status: '상담 완료', color: '#f3a600', note: '' }
   ];
 
-
-  const debtOptions = ['2,000만원 이하', '2,000만원 ~ 5,000만원', '5,000만원 ~ 1억 이하', '1억 이상'];
 
   return (
     <div className="bg-black">
@@ -229,31 +226,7 @@ export default function App() {
             </div>
 
             {/* Right Section */}
-            <div className="flex flex-col lg:flex-row gap-[8px] w-full lg:w-auto lg:items-center flex-1 min-w-0">
-              <div className="flex flex-col gap-[8px] flex-1 min-w-0">
-                <div className="flex flex-col md:flex-row gap-[8px] w-full">
-                  <input
-                    type="text"
-                    placeholder="성함"
-                    className="flex-1 min-w-0 bg-white px-[12px] py-[8px] rounded-[5px] text-[#d8d8d8] font-['Pretendard'] text-[16px] leading-[26px] focus:outline-none"
-                    style={{ color: '#d8d8d8' }}
-                  />
-                  <input
-                    type="text"
-                    placeholder="연락처(- 없이 숫자만 입력)"
-                    className="flex-1 min-w-0 bg-white px-[12px] py-[8px] rounded-[5px] text-[#d8d8d8] font-['Pretendard'] text-[16px] leading-[26px] focus:outline-none"
-                    style={{ color: '#d8d8d8' }}
-                  />
-                </div>
-                <div className="flex gap-[4px] items-center">
-                  <input type="checkbox" id="agree1" className="w-[11px] h-[11px] rounded-[2px] flex-shrink-0" />
-                  <label htmlFor="agree1" className="text-white text-[12px] md:text-[14px] leading-[24px] font-['Pretendard'] font-light">개인정보 수집 및 이용에 동의합니다.</label>
-                </div>
-              </div>
-              <button className="w-full lg:w-[269px] lg:h-full px-[24px] py-[8px] rounded-[5px] flex-shrink-0 flex items-center justify-center drop-shadow-[0px_0px_9.25px_rgba(255,255,255,0.53)] hover:opacity-90" style={{ backgroundImage: 'linear-gradient(-72.67098334790725deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 51.166%), linear-gradient(90deg, rgb(225, 65, 64) 0%, rgb(225, 65, 64) 100%)' }}>
-                <p className="font-['SCoreDream'] font-bold text-[26px] leading-[36px] text-white tracking-[-1.3px] whitespace-nowrap">무료 상담 신청</p>
-              </button>
-            </div>
+            <QuickConsultForm source="hero" variant="red" />
           </div>
         </section>
 
@@ -505,31 +478,7 @@ export default function App() {
             </div>
 
             {/* Right Section */}
-            <div className="flex flex-col lg:flex-row gap-[8px] w-full lg:w-auto lg:items-center flex-1 min-w-0">
-              <div className="flex flex-col gap-[8px] flex-1 min-w-0">
-                <div className="flex flex-col md:flex-row gap-[8px] w-full">
-                  <input
-                    type="text"
-                    placeholder="성함"
-                    className="flex-1 min-w-0 bg-white px-[12px] py-[8px] rounded-[5px] text-[#d8d8d8] font-['Pretendard'] text-[16px] leading-[26px] focus:outline-none"
-                    style={{ color: '#d8d8d8' }}
-                  />
-                  <input
-                    type="text"
-                    placeholder="연락처(- 없이 숫자만 입력)"
-                    className="flex-1 min-w-0 bg-white px-[12px] py-[8px] rounded-[5px] text-[#d8d8d8] font-['Pretendard'] text-[16px] leading-[26px] focus:outline-none"
-                    style={{ color: '#d8d8d8' }}
-                  />
-                </div>
-                <div className="flex gap-[4px] items-center">
-                  <input type="checkbox" id="agree2" className="w-[11px] h-[11px] rounded-[2px] flex-shrink-0" />
-                  <label htmlFor="agree2" className="text-white text-[12px] md:text-[14px] leading-[24px] font-['Pretendard'] font-light">개인정보 수집 및 이용에 동의합니다.</label>
-                </div>
-              </div>
-              <button className="w-full lg:w-[269px] lg:h-full px-[24px] py-[8px] rounded-[5px] flex-shrink-0 flex items-center justify-center drop-shadow-[0px_0px_9.25px_rgba(255,255,255,0.53)] hover:opacity-90" style={{ backgroundImage: 'linear-gradient(-72.67098334790725deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 51.166%), linear-gradient(90deg, rgb(255, 204, 0) 0%, rgb(255, 204, 0) 100%)' }}>
-                <p className="font-['SCoreDream'] font-bold text-[26px] leading-[36px] text-[#333] tracking-[-1.3px] whitespace-nowrap">무료 상담 신청</p>
-              </button>
-            </div>
+            <QuickConsultForm source="mid" variant="yellow" />
           </div>
         </section>
 
@@ -638,98 +587,7 @@ export default function App() {
             </div>
 
             {/* Right Form */}
-            <div className="bg-white rounded-[20px] p-6 md:p-8 xl:p-12 space-y-6 w-full xl:w-auto">
-              <div className="space-y-2">
-                <label className="font-['Pretendard'] font-semibold text-lg text-[#333]">
-                  성함 <span className="text-[#e14140]">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="w-full border-b border-[#ebebeb] pb-2 font-['Pretendard'] text-[#333] focus:outline-none"
-                  style={{ color: '#333' }}
-                  onFocus={(e) => {
-                    e.target.style.color = '#333';
-                  }}
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="font-['Pretendard'] font-semibold text-lg text-[#333]">
-                  연락처 <span className="text-[#e14140]">*</span>
-                </label>
-                <input
-                  type="tel"
-                  placeholder=""
-                  className="w-full border-b border-[#ebebeb] pb-2 font-['Pretendard'] text-[#333] focus:outline-none"
-                  style={{ color: '#333' }}
-                  onFocus={(e) => {
-                    e.target.style.color = '#333';
-                  }}
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="font-['Pretendard'] font-semibold text-lg text-[#333]">관심 분야</label>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setSelectedInterest('recovery')}
-                    className={`flex-1 px-3 py-2 rounded font-['Pretendard'] transition-colors ${
-                      selectedInterest === 'recovery'
-                        ? 'bg-[#ffeded] border border-[#e14140] text-[#e14140]'
-                        : 'bg-white border border-[#ebebeb] text-[#333]'
-                    }`}
-                  >
-                    개인회생
-                  </button>
-                  <button
-                    onClick={() => setSelectedInterest('bankruptcy')}
-                    className={`flex-1 px-3 py-2 rounded font-['Pretendard'] transition-colors ${
-                      selectedInterest === 'bankruptcy'
-                        ? 'bg-[#ffeded] border border-[#e14140] text-[#e14140]'
-                        : 'bg-white border border-[#ebebeb] text-[#333]'
-                    }`}
-                  >
-                    개인파산
-                  </button>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="font-['Pretendard'] font-semibold text-lg text-[#333]">채무 범위</label>
-                <div className="grid grid-cols-2 gap-2">
-                  {debtOptions.map((option) => (
-                    <button
-                      key={option}
-                      onClick={() => setSelectedDebt(option)}
-                      className={`px-3 py-2 rounded font-['Pretendard'] text-sm transition-colors ${
-                        selectedDebt === option
-                          ? 'bg-[#ffeded] border border-[#e14140] text-[#e14140]'
-                          : 'bg-white border border-[#ebebeb] text-[#333]'
-                      }`}
-                    >
-                      {option}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="font-['Pretendard'] font-semibold text-lg text-[#333]">
-                  개인정보 수집 및 이용 동의 <span className="text-[#e14140]">*</span>
-                </label>
-                <div className="flex gap-2 items-center">
-                  <input type="checkbox" id="agree" className="w-3 h-3 rounded" />
-                  <label htmlFor="agree" className="text-[#b4b4b4] text-[12px] md:text-sm font-['Pretendard']">
-                    개인정보 수집 및 이용에 동의합니다.
-                  </label>
-                </div>
-              </div>
-
-              <button className="w-full bg-[#e14140] text-white font-['Pretendard'] font-semibold text-[16px] md:text-[18px] xl:text-xl py-2 md:py-3 xl:py-3 rounded hover:opacity-90 transition-opacity">
-                무료 상담 신청
-              </button>
-            </div>
+            <DetailConsultForm />
           </div>
         </section>
 

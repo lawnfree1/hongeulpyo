@@ -1,0 +1,10 @@
+# 비밀값은 Vercel 대시보드의 Environment Variables로만 관리한다.
+.env
+.env.*
+!.env.example
+
+# 배포에 불필요한 것들
+.claude
+CLAUDE.md
+dist
+node_modules

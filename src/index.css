@@ -62,17 +62,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Input placeholder styling */
+/* 입력 글자색·플레이스홀더 색은 각 컴포넌트의 Tailwind 클래스로 지정한다.
+   (전역 !important를 두면 관리자 페이지처럼 어두운 배경의 입력창에서 글자가 보이지 않는다) */
 input::placeholder {
-  color: #d8d8d8 !important;
-  opacity: 1 !important;
+  opacity: 1;
 }
 
+/* 포커스하면 플레이스홀더를 감춘다 */
 input:focus::placeholder {
-  color: transparent !important;
-}
-
-input {
-  color: #333 !important;
+  color: transparent;
 }
 
